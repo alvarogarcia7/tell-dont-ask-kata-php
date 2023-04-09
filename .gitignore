@@ -1,0 +1,9 @@
+.idea
+.phpunit.result.cache
+/bin
+!/bin/main.php
+/vendor
+/composer.phar
+/composer.lock
+
+.phpunit.cache/
