@@ -11,7 +11,7 @@ install-githooks:
 up:
 	docker-compose up -d
 
-init: up install-dependencies
+init: up install-dependencies install-githooks
 
 bash: up
 	docker-compose exec php bash
