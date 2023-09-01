@@ -4,6 +4,10 @@ test: up
 test-ci: up
 	DOCKER_OPTIONS="-T" $(MAKE) test
 
+install-githooks:
+	cp pre-commit .git/hooks
+.PHONY: install-githooks
+
 up:
 	docker-compose up -d
 
