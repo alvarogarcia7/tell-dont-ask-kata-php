@@ -25,6 +25,16 @@ class Category
     }
 
     /**
+     * @param float $taxPercentage
+     * @return Category
+     */
+    public function setTaxPercentage(float $taxPercentage): Category
+    {
+        $this->taxPercentage = $taxPercentage;
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getName(): string
@@ -32,4 +42,13 @@ class Category
         return $this->name;
     }
 
+    /**
+     * @param string $name
+     * @return Category
+     */
+    public function setName(string $name): Category
+    {
+        $this->name = $name;
+        return $this;
+    }
 }
