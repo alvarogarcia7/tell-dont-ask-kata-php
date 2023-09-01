@@ -5,7 +5,7 @@ namespace Tests\Pitchart\TellDontAskKata\UseCase;
 use Doctrine\Common\Collections\ArrayCollection;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
-use Pitchart\TellDontAskKata\Domain\CategoryBuilder;
+use Pitchart\TellDontAskKata\Domain\CategoryFactory;
 use Pitchart\TellDontAskKata\Domain\OrderStatus;
 use Pitchart\TellDontAskKata\Domain\Product;
 use Pitchart\TellDontAskKata\UseCase\OrderCreationUseCase;
@@ -25,8 +25,7 @@ class OrderCreationUseCaseTest extends TestCase
     {
         parent::setUp();
 
-        $food = (new CategoryBuilder())->setName('food')->setTaxPercentage(10)->build();
-//        $food = new Category('food', 10);
+        $food = (new CategoryFactory())->setName('food')->setTaxPercentage(10);
 
         $this->productCatalog = new InMemoryProductCatalog(new ArrayCollection([
             (new Product())->setName("salad")->setPrice(3.56)->setCategory($food),

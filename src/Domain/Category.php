@@ -30,8 +30,7 @@ class Category
      */
     public function setTaxPercentage(float $taxPercentage): Category
     {
-        $this->taxPercentage = $taxPercentage;
-        return $this;
+        throw new \Exception("CANNOT BE USED IN PRODUCTION");
     }
 
     /**
@@ -40,15 +39,5 @@ class Category
     public function getName(): string
     {
         return $this->name;
-    }
-
-    /**
-     * @param string $name
-     * @return Category
-     */
-    public function setName(string $name): Category
-    {
-        $this->name = $name;
-        return $this;
     }
 }
