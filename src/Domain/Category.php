@@ -9,6 +9,13 @@ class Category
 
     private float $taxPercentage;
 
+    public function __construct(string $name, float $taxPercentage)
+    {
+        $this->name = $name;
+        $this->taxPercentage = $taxPercentage;
+    }
+
+
     /**
      * @return float
      */

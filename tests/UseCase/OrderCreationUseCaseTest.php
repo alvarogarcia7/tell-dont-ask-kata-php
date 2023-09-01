@@ -25,7 +25,7 @@ class OrderCreationUseCaseTest extends TestCase
     {
         parent::setUp();
 
-        $food = (new Category())->setName('food')->setTaxPercentage(10);
+        $food = new Category('food', 10);
 
         $this->productCatalog = new InMemoryProductCatalog(new ArrayCollection([
             (new Product())->setName("salad")->setPrice(3.56)->setCategory($food),
